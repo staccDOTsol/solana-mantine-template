@@ -1,11 +1,11 @@
 'use client';
 
-import { Landing } from '@/components/Landing/Landing';
+import { Create } from '@/components/Create/Create';
 
 export default function HomePage() {
   return (
     <>
-      <Landing />
+      <Create />
     </>
   );
 }

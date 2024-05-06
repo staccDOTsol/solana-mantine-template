@@ -7,7 +7,15 @@ import { MetaplexLogo, MetaplexLogoVariant } from '../MetaplexLogo';
 import { Env } from '@/providers/useEnv';
 import RetainQueryLink from '../RetainQueryLink';
 
-const HeaderLink = ({ label, link, disabled }: { label: string, link: string, disabled?: boolean }) => {
+const HeaderLink = ({
+  label,
+  link,
+  disabled,
+}: {
+  label: string;
+  link: string;
+  disabled?: boolean;
+}) => {
   const cls = disabled ? [classes.disabled, classes.link].join(' ') : classes.link;
   return (
     <RetainQueryLink href={link} className={cls}>
@@ -18,17 +26,13 @@ const HeaderLink = ({ label, link, disabled }: { label: string, link: string, di
 
 export function Header({ env, setEnv }: { env: string; setEnv: (env: Env) => void }) {
   return (
-    <Container
-      size="xl"
-      h={80}
-      pt={12}
-    >
+    <Container size="xl" h={80} pt={12}>
       <div className={classes.inner}>
         <Flex justify="center" align="center" gap="md">
           <RetainQueryLink href="/">
             <MetaplexLogo variant={MetaplexLogoVariant.Small} />
           </RetainQueryLink>
-          <Title order={2}>Metaplex Mantine Template</Title>
+          <Title order={2}>Mint a Staccv0.2.0 For Apparently No Reason</Title>
         </Flex>
         <Group>
           <HeaderLink label="Create" link="/create" />
